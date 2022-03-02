@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SimpleBookService.Core.Book;
 
 namespace SimpleBookService.WebApi.Controllers
 {
@@ -6,15 +7,16 @@ namespace SimpleBookService.WebApi.Controllers
     [Route("[controller]")]
     public class BooksController : ControllerBase
     {
-        public BooksController()
+        private readonly IBookAppService _bookAppService;
+        public BooksController(IBookAppService bookAppService)
         {
-
+            _bookAppService = bookAppService;
         }
 
         [HttpGet]
         public IActionResult GetBooks()
         {
-            return Ok();
+            return Ok(_bookAppService.GetBooks());
         }
     }
 }
