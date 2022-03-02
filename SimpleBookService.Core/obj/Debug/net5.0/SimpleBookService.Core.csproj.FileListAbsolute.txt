@@ -1,0 +1,5 @@
+C:\Projects\Examples\SimpleBookService\SimpleBookService.Core\obj\Debug\net5.0\SimpleBookService.Core.csproj.AssemblyReference.cache
+C:\Projects\Examples\SimpleBookService\SimpleBookService.Core\obj\Debug\net5.0\SimpleBookService.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Examples\SimpleBookService\SimpleBookService.Core\obj\Debug\net5.0\SimpleBookService.Core.AssemblyInfoInputs.cache
+C:\Projects\Examples\SimpleBookService\SimpleBookService.Core\obj\Debug\net5.0\SimpleBookService.Core.AssemblyInfo.cs
+C:\Projects\Examples\SimpleBookService\SimpleBookService.Core\obj\Debug\net5.0\SimpleBookService.Core.csproj.CoreCompileInputs.cache

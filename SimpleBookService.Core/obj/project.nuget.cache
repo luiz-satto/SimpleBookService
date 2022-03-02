@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "9y8kfMZxSLi1PP7fiEPxC3S8brI1SmITHYw6e6DDAp9JJoDPPCi3szkvCFb8YvPUS/RGz6EtsbPnZ97AT1FgZQ==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\Examples\\SimpleBookService\\SimpleBookService.Core\\SimpleBookService.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\luiz.satto\\.nuget\\packages\\mongodb.bson\\2.14.1\\mongodb.bson.2.14.1.nupkg.sha512",
+    "C:\\Users\\luiz.satto\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
