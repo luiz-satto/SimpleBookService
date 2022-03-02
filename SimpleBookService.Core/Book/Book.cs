@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using System;
 
-namespace SimpleBookService.Core.Book
+namespace SimpleBookService.Core
 {
     public class Book
     {

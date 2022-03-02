@@ -5,7 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using SimpleBookService.Core;
-using SimpleBookService.Core.Book;
 
 namespace SimpleBookService.WebApi
 {
@@ -21,7 +20,8 @@ namespace SimpleBookService.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<SimpleBookServiceDbConfig>(Configuration);
+            services.AddSingleton<IDbClient, DbClient>();
+            services.Configure<DbConfig>(Configuration);
             services.AddTransient<IBookAppService, BookAppService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>

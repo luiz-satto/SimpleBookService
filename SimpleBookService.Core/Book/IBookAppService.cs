@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SimpleBookService.Core.Book
+namespace SimpleBookService.Core
 {
     public interface IBookAppService
     {

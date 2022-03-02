@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SimpleBookService.Core.Book;
+using SimpleBookService.Core;
 
 namespace SimpleBookService.WebApi.Controllers
 {
