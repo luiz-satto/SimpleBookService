@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Badge, Button, Table } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 import api from "../../services/simple-book-service.api";
 import moment from "moment"
+
+import './index.css'
 
 interface IBook {
     id: string;
@@ -24,6 +27,7 @@ enum BookCategory {
 const Books: React.FC = () => {
 
     const [books, setBooks] = useState<IBook[]>([])
+    const history = useHistory()
 
     useEffect(() => {
         getBooks()
@@ -31,12 +35,15 @@ const Books: React.FC = () => {
 
     async function getBooks() {
         const response = await api.get("/GetBooks")
-        console.log(response)
         setBooks(response.data)
     }
 
     function formatDate(date: Date) {
         return moment(date).format('DD/MM/YYYY')
+    }
+
+    function createBook() {
+        history.push('/Create')
     }
 
     function getCategoryBadge(category: string) {
@@ -59,8 +66,11 @@ const Books: React.FC = () => {
     return (
         <div className="container">
             <br />
-            <h1><Button className="pb-2" size="lg" variant="primary">Create New Book</Button> {' '}</h1>
-
+            <div className="book-header">
+                <h1>Books Page</h1>
+                <Button variant="primary" onClick={createBook}>Create New Book</Button>
+            </div>
+            <br />
             <Table className="text-center" striped bordered hover>
                 <thead>
                     <tr>
