@@ -10,3 +10,15 @@ C:\Projects\Examples\SimpleBookService\SimpleBookService.Core\obj\Debug\net5.0\S
 C:\Projects\Examples\SimpleBookService\SimpleBookService.Core\obj\Debug\net5.0\SimpleBookService.Core.dll
 C:\Projects\Examples\SimpleBookService\SimpleBookService.Core\obj\Debug\net5.0\ref\SimpleBookService.Core.dll
 C:\Projects\Examples\SimpleBookService\SimpleBookService.Core\obj\Debug\net5.0\SimpleBookService.Core.pdb
+C:\Projects\SimpleBookService\SimpleBookService.Core\bin\Debug\net5.0\SimpleBookService.Core.deps.json
+C:\Projects\SimpleBookService\SimpleBookService.Core\bin\Debug\net5.0\SimpleBookService.Core.dll
+C:\Projects\SimpleBookService\SimpleBookService.Core\bin\Debug\net5.0\SimpleBookService.Core.pdb
+C:\Projects\SimpleBookService\SimpleBookService.Core\obj\Debug\net5.0\SimpleBookService.Core.csproj.AssemblyReference.cache
+C:\Projects\SimpleBookService\SimpleBookService.Core\obj\Debug\net5.0\SimpleBookService.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\SimpleBookService\SimpleBookService.Core\obj\Debug\net5.0\SimpleBookService.Core.AssemblyInfoInputs.cache
+C:\Projects\SimpleBookService\SimpleBookService.Core\obj\Debug\net5.0\SimpleBookService.Core.AssemblyInfo.cs
+C:\Projects\SimpleBookService\SimpleBookService.Core\obj\Debug\net5.0\SimpleBookService.Core.csproj.CoreCompileInputs.cache
+C:\Projects\SimpleBookService\SimpleBookService.Core\obj\Debug\net5.0\SimpleBookService.Core.dll
+C:\Projects\SimpleBookService\SimpleBookService.Core\obj\Debug\net5.0\refint\SimpleBookService.Core.dll
+C:\Projects\SimpleBookService\SimpleBookService.Core\obj\Debug\net5.0\SimpleBookService.Core.pdb
+C:\Projects\SimpleBookService\SimpleBookService.Core\obj\Debug\net5.0\ref\SimpleBookService.Core.dll

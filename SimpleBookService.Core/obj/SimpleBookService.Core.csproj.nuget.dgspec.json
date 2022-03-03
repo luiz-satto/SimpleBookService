@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Examples\\SimpleBookService\\SimpleBookService.Core\\SimpleBookService.Core.csproj": {}
+    "C:\\Projects\\SimpleBookService\\SimpleBookService.Core\\SimpleBookService.Core.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Examples\\SimpleBookService\\SimpleBookService.Core\\SimpleBookService.Core.csproj": {
+    "C:\\Projects\\SimpleBookService\\SimpleBookService.Core\\SimpleBookService.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Examples\\SimpleBookService\\SimpleBookService.Core\\SimpleBookService.Core.csproj",
+        "projectUniqueName": "C:\\Projects\\SimpleBookService\\SimpleBookService.Core\\SimpleBookService.Core.csproj",
         "projectName": "SimpleBookService.Core",
-        "projectPath": "C:\\Projects\\Examples\\SimpleBookService\\SimpleBookService.Core\\SimpleBookService.Core.csproj",
-        "packagesPath": "C:\\Users\\luiz.satto\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Examples\\SimpleBookService\\SimpleBookService.Core\\obj\\",
+        "projectPath": "C:\\Projects\\SimpleBookService\\SimpleBookService.Core\\SimpleBookService.Core.csproj",
+        "packagesPath": "C:\\Users\\luizf\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\SimpleBookService\\SimpleBookService.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\luiz.satto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\luizf\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,8 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.telerik.com/nuget": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -69,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

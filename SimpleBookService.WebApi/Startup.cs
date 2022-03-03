@@ -24,9 +24,20 @@ namespace SimpleBookService.WebApi
             services.Configure<DbConfig>(Configuration);
             services.AddTransient<IBookAppService, BookAppService>();
             services.AddControllers();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SimpleBookService.WebApi", Version = "v1" });
+            });
+
+            services.AddCors(option =>
+            {
+                option.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin()
+                           .AllowAnyHeader()
+                           .AllowAnyMethod();
+                });
             });
         }
 
@@ -43,6 +54,8 @@ namespace SimpleBookService.WebApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseAuthorization();
 
