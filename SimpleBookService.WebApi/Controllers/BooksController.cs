@@ -27,7 +27,7 @@ namespace SimpleBookService.WebApi.Controllers
             return Ok(book);
         }
 
-        [HttpGet("/Create", Name = "CreateBookAsync")]
+        [HttpPost("/Create", Name = "CreateBookAsync")]
         public async Task<IActionResult> CreateBookAsync(Book book)
         {
             var bookId = await _bookAppService.CreateBookAsync(book);

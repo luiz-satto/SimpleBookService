@@ -43,7 +43,7 @@ const Books: React.FC = () => {
     }
 
     function createBook() {
-        history.push('/Create')
+        history.push('/Register')
     }
 
     function getCategoryBadge(category: string) {
@@ -68,7 +68,7 @@ const Books: React.FC = () => {
             <br />
             <div className="book-header">
                 <h1>Books Page</h1>
-                <Button variant="primary" onClick={createBook}>Create New Book</Button>
+                <Button variant="dark" onClick={createBook}>Create New Book</Button>
             </div>
             <br />
             <Table className="text-center" striped bordered hover>
