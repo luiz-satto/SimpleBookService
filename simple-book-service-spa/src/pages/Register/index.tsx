@@ -19,7 +19,6 @@ const Register: React.FC = () => {
     const history = useHistory()
     function goBack() { history.goBack() }
 
-    // const params = useParams()
     const { id } = useParams() as {
         id: string;
     }

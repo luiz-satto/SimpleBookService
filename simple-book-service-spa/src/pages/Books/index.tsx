@@ -67,6 +67,15 @@ const Books: React.FC = () => {
         history.push(`/Register/${id}`)
     }
 
+    function viewBook(id: string) {
+        history.push(`/View/${id}`)
+    }
+
+    async function deleteBook(id: string) {
+        await api.delete(`/Delete/${id}`)
+        getBooks()
+    }
+
     return (
         <div className="container">
             <br />
@@ -94,8 +103,8 @@ const Books: React.FC = () => {
                                 <tr key={book.id}>
                                     <td>
                                         <Button size="sm" variant="secondary" onClick={() => updateBook(book.id)}>Edit</Button> {' '}
-                                        <Button size="sm" variant="info">View</Button> {' '}
-                                        <Button size="sm" variant="danger">Delete</Button> {' '}
+                                        <Button size="sm" variant="info" onClick={() => viewBook(book.id)}>View</Button> {' '}
+                                        <Button size="sm" variant="danger" onClick={() => deleteBook(book.id)}>Delete</Button> {' '}
                                     </td>
                                     <td>{book.name}</td>
                                     <td>{book.author}</td>
