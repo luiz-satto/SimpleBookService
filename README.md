@@ -1,3 +1,11 @@
+
+Simple Book SPA
+---
+* This application is a simple service to deal with books (CRUD).
+* This doesn't implement an entire library but just the basic structure to maintain a catalogue of books:
+
+![image](https://github.com/luiz-satto/SimpleBookService/blob/main/Assets/simple-book-service-home.PNG)
+
 Simple Book Service
 ---
 > This project is using user-secrets to store the connection string details and connect to mongoDB
@@ -28,6 +36,3 @@ Simple Book Service WebApi
 > [PUT] **Update/{id}**
 * This API implement DeleteBookAsync endpoint to delete an existing book
 > [DELETE] **Delete/{id}**
-
-Simple Book Service SPA
----
