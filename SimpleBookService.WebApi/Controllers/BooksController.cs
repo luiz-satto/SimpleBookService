@@ -20,7 +20,7 @@ namespace SimpleBookService.WebApi.Controllers
             return Ok(_bookAppService.GetBooks());
         }
 
-        [HttpGet("{id}/GetBook", Name = "GetBook")]
+        [HttpGet("/GetBook/{id}", Name = "GetBook")]
         public IActionResult GetBook(string id)
         {
             var book = _bookAppService.GetBook(id);
@@ -34,14 +34,20 @@ namespace SimpleBookService.WebApi.Controllers
             return CreatedAtRoute("GetBook", new { id = book.Id }, bookId);
         }
 
-        [HttpPut("/Update", Name = "UpdateBookAsync")]
-        public async Task<IActionResult> UpdateBookAsync(Book book)
+        [HttpPut("/Update/{id}", Name = "UpdateBookAsync")]
+        public async Task<IActionResult> UpdateBookAsync(string id, [FromBody] Book book)
         {
+            if (id == null || string.IsNullOrEmpty(id) || book == null)
+            {
+                return NoContent();
+            }
+
+            book.Id = id;
             var bookUpdated = await _bookAppService.UpdateBookAsync(book);
             return Ok(bookUpdated);
         }
 
-        [HttpDelete("{id}/Delete", Name = "DeleteBookAsync")]
+        [HttpDelete("/Delete/{id}", Name = "DeleteBookAsync")]
         public async Task<IActionResult> DeleteBookAsync(string id)
         {
             await _bookAppService.DeleteBookAsync(id);

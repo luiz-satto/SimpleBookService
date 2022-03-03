@@ -42,10 +42,6 @@ const Books: React.FC = () => {
         return moment(date).format('DD/MM/YYYY')
     }
 
-    function createBook() {
-        history.push('/Register')
-    }
-
     function getCategoryBadge(category: string) {
         let _category = category.toLocaleLowerCase()
         if (_category === BookCategory.Biography) {
@@ -63,6 +59,14 @@ const Books: React.FC = () => {
         return "secondary"
     }
 
+    function createBook() {
+        history.push('/Register')
+    }
+
+    function updateBook(id: string) {
+        history.push(`/Register/${id}`)
+    }
+
     return (
         <div className="container">
             <br />
@@ -75,7 +79,6 @@ const Books: React.FC = () => {
                 <thead>
                     <tr>
                         <th>Actions</th>
-                        <th>Id</th>
                         <th>Name</th>
                         <th>Author</th>
                         <th>Category</th>
@@ -90,11 +93,10 @@ const Books: React.FC = () => {
                             return (
                                 <tr key={book.id}>
                                     <td>
-                                        <Button size="sm" variant="secondary">Edit</Button> {' '}
+                                        <Button size="sm" variant="secondary" onClick={() => updateBook(book.id)}>Edit</Button> {' '}
                                         <Button size="sm" variant="info">View</Button> {' '}
                                         <Button size="sm" variant="danger">Delete</Button> {' '}
                                     </td>
-                                    <td>{book.id}</td>
                                     <td>{book.name}</td>
                                     <td>{book.author}</td>
                                     <td>

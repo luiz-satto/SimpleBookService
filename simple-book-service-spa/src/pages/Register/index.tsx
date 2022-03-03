@@ -1,6 +1,6 @@
 import React, { useState, useEffect, ChangeEvent } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
 import api from "../../services/simple-book-service.api";
 import './index.css'
@@ -15,6 +15,19 @@ interface IBook {
 }
 
 const Register: React.FC = () => {
+
+    const history = useHistory()
+    function goBack() { history.goBack() }
+
+    // const params = useParams()
+    const { id } = useParams() as {
+        id: string;
+    }
+    useEffect(() => {
+        if (id !== undefined) {
+            getBook(id)
+        }
+    }, [id])
 
     const [model, setModel] = useState<IBook>({
         name: '',
@@ -34,12 +47,31 @@ const Register: React.FC = () => {
 
     async function onSubmit(event: ChangeEvent<HTMLFormElement>) {
         event.preventDefault()
-        const response = await api.post('/Create', model);
-        console.log(response);
+        if (id !== undefined) {
+            const response = await api.put(`/Update/${id}`, model)
+            console.log(response)
+        } else {
+            const response = await api.post('/Create', model)
+            console.log(response)
+        }
+
+        goBack()
     }
 
-    const history = useHistory()
-    function goBack() { history.goBack() }
+    async function getBook(id: string) {
+        const response = await api.get(`GetBook/${id}`)
+        if (response.data) {
+            let data = response.data
+            setModel({
+                name: data.name,
+                author: data.author,
+                category: data.category,
+                description: data.description,
+                price: data.price,
+                registration: data.registration
+            })
+        }
+    }
 
     return (
         <div className="container">
@@ -56,6 +88,7 @@ const Register: React.FC = () => {
                         <Form.Control
                             type="text"
                             name="name"
+                            value={model.name}
                             onChange={(event: ChangeEvent<HTMLInputElement>) => updatedModel(event)}
                         />
                     </Form.Group>
@@ -65,6 +98,7 @@ const Register: React.FC = () => {
                         <Form.Control
                             type="text"
                             name="author"
+                            value={model.author}
                             onChange={(event: ChangeEvent<HTMLInputElement>) => updatedModel(event)}
                         />
                     </Form.Group>
@@ -74,6 +108,7 @@ const Register: React.FC = () => {
                         <Form.Control
                             type="text"
                             name="category"
+                            value={model.category}
                             onChange={(event: ChangeEvent<HTMLInputElement>) => updatedModel(event)}
                         />
                     </Form.Group>
@@ -83,6 +118,7 @@ const Register: React.FC = () => {
                         <Form.Control
                             type="text"
                             name="price"
+                            value={model.price}
                             onChange={(event: ChangeEvent<HTMLInputElement>) => updatedModel(event)}
                         />
                     </Form.Group>
@@ -93,6 +129,7 @@ const Register: React.FC = () => {
                             as="textarea"
                             rows={3}
                             name="description"
+                            value={model.description}
                             onChange={(event: ChangeEvent<HTMLInputElement>) => updatedModel(event)}
                         />
                     </Form.Group>
